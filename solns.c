@@ -3,7 +3,7 @@
 int max(int a[],int n)
 {
   int l=a[0];
-  for(int i=0;i<n:i++)
+  for(int i=0;i<n;i++)
   {
     if(a[i]>l)
       l=a[i];
@@ -74,7 +74,7 @@ int factors(int n, int a[])
         }
       if(flag==1)
       {
-        while(n%i=0)
+        while((n%i)==0)
         {
           a[count]=i;
           count++;
