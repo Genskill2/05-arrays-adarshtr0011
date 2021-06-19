@@ -48,7 +48,7 @@ int mode(int a[], int n)
   int count[max+1];
 
   int value,large;
-  for(int i=0;i<max;i++)
+  for(int i=0;i<=max;i++)
   {count[i]=0;}
   
   for(int i=0;i<=max;i++)
@@ -57,6 +57,8 @@ int mode(int a[], int n)
      if(a[j]==i)
        count[i]=count[i]+1;                           
    }
+  
+
   
   large=count[0];
 
