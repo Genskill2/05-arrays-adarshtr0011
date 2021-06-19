@@ -32,14 +32,26 @@ int min(int a[],int n)
    return(sum/n);
  }
 
+
+
 int mode(int a[], int n)
 {
-  int count[n];
-  int value,large;
+  int max=a[0];
   for(int i=0;i<n;i++)
+  {
+    if(a[i]>max)
+    {
+      max=a[i];
+    }
+  }
+
+  int count[max+1];
+
+  int value,large;
+  for(int i=0;i<max;i++)
   {count[i]=0;}
   
-  for(int i=0;i<n;i++)
+  for(int i=0;i<=max;i++)
    for(int j=0;j<n;j++)
    {
      if(a[j]==i)
@@ -48,7 +60,7 @@ int mode(int a[], int n)
   
   large=count[0];
 
-  for(int i=0;i<n;i++)
+  for(int i=0;i<=max;i++)
   {
     if(count[i]>large)
     {
@@ -58,6 +70,7 @@ int mode(int a[], int n)
   }
   return value;
 }
+
 
 
 int factors(int n, int a[])
